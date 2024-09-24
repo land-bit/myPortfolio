@@ -1,0 +1,31 @@
+name: HTML Validation
+
+# Ce workflow s'exécute sur chaque commit et pull request dans la branche principale
+on:
+  push:
+    branches:
+      - main
+  pull_request:
+    branches:
+      - main
+
+jobs:
+  html-lint:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v3
+
+      # Installe Node.js (si nécessaire pour tes outils de test)
+      - name: Set up Node.js
+        uses: actions/setup-node@v3
+        with:
+          node-version: '16'
+
+      # Installe un validateur HTML (par exemple, htmlhint)
+      - name: Install HTMLHint
+        run: npm install -g htmlhint
+
+      # Exécute les tests HTML
+      - name: Run HTMLHint
+        run: htmlhint '**/*.html'
