@@ -1,3 +1,16 @@
 {
-  "extends": ["next/core-web-vitals", "next/typescript"]
+  "extends": ["next/core-web-vitals", "next/typescript"],
+  "rules": {
+    "react/react-in-jsx-scope": "off",
+    "semi": ["error", "always"],
+    "eqeqeq": ["error", "always"],
+    "no-console": "warn",
+    "no-unused-vars": ["error"],
+    "no-undef": "error",
+    "no-multiple-empty-lines": ["error", { "max": 1 }],
+    "indent": ["error", 2],
+    "camelcase": ["error", { "properties": "always" }],
+    "prefer-const": "error",
+    "no-debugger": "error"
+  }
 }

@@ -1,4 +1,4 @@
-name: HTML Validation
+name: Linting Workflow
 
 # Ce workflow s'exécute sur chaque commit et pull request dans la branche principale
 on:
@@ -10,22 +10,23 @@ on:
       - main
 
 jobs:
-  html-lint:
+  lint:
     runs-on: ubuntu-latest
     steps:
+      # Checkout le code
       - name: Checkout code
         uses: actions/checkout@v3
 
-      # Installe Node.js (si nécessaire pour tes outils de test)
+      # Installe Node.js
       - name: Set up Node.js
         uses: actions/setup-node@v3
         with:
-          node-version: '16'
+          node-version: "16"
 
-      # Installe un validateur HTML (par exemple, htmlhint)
-      - name: Install HTMLHint
-        run: npm install -g htmlhint
+      # Installe les dépendances du projet
+      - name: Install dependencies
+        run: npm install
 
-      # Exécute les tests HTML
-      - name: Run HTMLHint
-        run: htmlhint '**/*.html'
+      # Exécute ESLint pour valider les fichiers JSX/TSX
+      - name: Run ESLint
+        run: npm run lint
