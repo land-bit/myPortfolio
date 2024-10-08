@@ -7,7 +7,7 @@ export default function Home({
 }) {
   return (
     <>
-      <header>
+      <header className="flex justify-around border-b py-4 bg-secondary">
         <Header locale={locale} />
       </header>
       <main></main>

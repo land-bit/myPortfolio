@@ -28,7 +28,7 @@ export default function Header({ locale }: Props) {
         itege
       </h2>
       <NavigationMenu>
-        <NavigationMenuList>
+        <NavigationMenuList className="gap-10">
           {menu.map((e, i) => (
             <NavigationMenuItem key={i}>
               <NavigationMenuLink>{e}</NavigationMenuLink>
