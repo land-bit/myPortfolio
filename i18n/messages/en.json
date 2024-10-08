@@ -1,6 +1,8 @@
 {
-  "HomePage": {
-    "title": "Hello world!",
-    "about": "Go to the about page"
+  "header": {
+    "menu": {
+      "home": "Home",
+      "about": "About"
+    }
   }
 }

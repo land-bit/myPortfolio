@@ -1,6 +1,8 @@
 {
-  "HomePage": {
-    "title": "Bonjour le monde!",
-    "about": "Aller sur la page about"
+  "header": {
+    "menu": {
+      "home": "Accueil",
+      "about": "A propos"
+    }
   }
 }
