@@ -1,4 +1,5 @@
 import Header from "@/components/header/header";
+import Me from "@/components/shared/me";
 
 export default function Home({
   params: { locale },
@@ -10,7 +11,9 @@ export default function Home({
       <header className="flex justify-around border-b py-4 bg-secondary">
         <Header locale={locale} />
       </header>
-      <main></main>
+      <main className="flex flex-col items-center">
+        <Me />
+      </main>
       <footer></footer>
     </>
   );

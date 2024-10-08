@@ -4,5 +4,13 @@
       "home": "Home",
       "about": "About"
     }
+  },
+  "main": {
+    "me": {
+      "salutation": "Hello! I Am ",
+      "title": "A developer who",
+      "description": "Optimizes every line of code...",
+      "note": "Because if the user experience isn't fluid, what's the point of everything else?"
+    }
   }
 }
